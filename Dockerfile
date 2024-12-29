@@ -1,19 +1,15 @@
 FROM node:18-alpine
-
 WORKDIR /app
 
-# Install dependencies
-COPY package.json yarn.lock ./
-RUN yarn install
+# Copy package files and install
+COPY package.json package-lock.json ./
+RUN npm install
 
-# Copy all source
+# Copy the rest
 COPY . .
 
 # Build Strapi
-RUN yarn build
+RUN npm run build
 
-# Expose port
 EXPOSE 1337
-
-# Start Strapi
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
