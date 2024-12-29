@@ -1,0 +1,40 @@
+{
+  "name": "boom",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "scripts": {
+    "build": "cross-env ENV_PATH=.env.production strapi build",
+    "deploy": "strapi deploy",
+    "develop": "cross-env ENV_PATH=.env.development strapi develop",
+    "transfer": "cross-env ENV_PATH=.env.production strapi transfer",
+    "start": "cross-env ENV_PATH=.env.production strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "5.6.0",
+    "@strapi/plugin-users-permissions": "5.6.0",
+    "@strapi/strapi": "5.6.0",
+    "@types/node-fetch": "^2.6.12",
+    "better-sqlite3": "11.3.0",
+    "node-fetch": "^2.7.0",
+    "pg": "^8.13.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "b15d1178-6164-44ea-bf8b-707312050eb7"
+  }
+}

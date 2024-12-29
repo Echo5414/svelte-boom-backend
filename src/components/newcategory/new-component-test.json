@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_newcategory_new_component_tests",
+  "info": {
+    "displayName": "new component test",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "newtextfield": {
+      "type": "string",
+      "required": true
+    },
+    "isCool": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}
