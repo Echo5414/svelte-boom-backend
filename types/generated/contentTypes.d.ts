@@ -372,12 +372,13 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
+    description: '';
     displayName: 'Category';
     pluralName: 'categories';
     singularName: 'category';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -405,12 +406,13 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
 export interface ApiCollectionCollection extends Struct.CollectionTypeSchema {
   collectionName: 'collections';
   info: {
+    description: '';
     displayName: 'Collection';
     pluralName: 'collections';
     singularName: 'collection';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -572,7 +574,7 @@ export interface ApiMovementMovement extends Struct.CollectionTypeSchema {
     singularName: 'movement';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -603,7 +605,7 @@ export interface ApiPrecisionPrecision extends Struct.CollectionTypeSchema {
     singularName: 'precision';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -662,7 +664,7 @@ export interface ApiTechniqueTechnique extends Struct.CollectionTypeSchema {
     singularName: 'technique';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -693,7 +695,7 @@ export interface ApiTypeType extends Struct.CollectionTypeSchema {
     singularName: 'type';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
