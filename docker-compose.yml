@@ -5,7 +5,7 @@ services:
     build: .
     container_name: svelte-boom-strapi
     ports:
-      - "3000:3000"
+      - "1337:1337"
     depends_on:
       - db
 volumes:
