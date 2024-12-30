@@ -11,8 +11,11 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+RUN mkdir -p /app/public/uploads && \
+    chown -R node:node /app/public
+
+USER node
 
 EXPOSE 1337
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]
 
