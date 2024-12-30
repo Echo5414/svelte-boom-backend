@@ -11,12 +11,8 @@ RUN npm install
 
 COPY . .
 
-# Make start script executable
-COPY start.sh .
-RUN chmod +x start.sh
-
 RUN npm run build
 
 EXPOSE 1337
-CMD ["./start.sh"]
+CMD ["npm", "start"]
 
