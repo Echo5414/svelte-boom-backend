@@ -6,4 +6,15 @@ export default ({ env }) => ({
       },
     },
   },
+  'users-permissions': {
+    config: {
+      providers: {
+        steam: {
+          enabled: true,
+          icon: 'steam',
+          key: env('STEAM_API_KEY'),
+        },
+      },
+    },
+  },
 });

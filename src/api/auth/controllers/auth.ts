@@ -1,8 +1,13 @@
 export default {
   async steamCallback(ctx) {
-    const { steamId } = ctx.request.body;
-    
     try {
+      // Get steamId from the OpenID response
+      const steamId = ctx.query['openid.claimed_id']?.split('/').pop();
+      
+      if (!steamId) {
+        throw new Error('Steam ID not found in response');
+      }
+
       // Get Steam profile using the service
       const steamService = strapi.service('api::auth.steam');
       if (!steamService) {

@@ -1,7 +1,7 @@
 export default {
   routes: [
     {
-      method: 'POST',
+      method: 'GET',
       path: '/auth/steam/callback',
       handler: 'auth.steamCallback',
       config: {
