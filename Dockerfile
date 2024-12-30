@@ -11,9 +11,15 @@ RUN npm install
 
 COPY . .
 
-RUN mkdir -p /app/public/uploads && \
-    chown -R node:node /app/public
+# Build first
+RUN npm run build
 
+# Then set up permissions
+RUN mkdir -p /app/public/uploads && \
+    chown -R node:node /app/public && \
+    chown -R node:node /app/dist
+
+# Switch to non-root user
 USER node
 
 EXPOSE 1337
