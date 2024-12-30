@@ -4,9 +4,7 @@ export default ({ env }) => ({
   app: {
     keys: env.array('APP_KEYS'),
   },
-  url: env('BACKEND_URL', 'http://localhost:1337'),
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
   },
-  prefix: env('NODE_ENV') === 'production' ? '' : '/api',
 });
