@@ -20,7 +20,8 @@ export default [
       enabled: true,
       origin: [
         process.env.FRONTEND_URL,
-        'https://steamcommunity.com'
+        'https://steamcommunity.com',
+        process.env.BACKEND_URL
       ],
       credentials: true,
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
