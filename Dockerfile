@@ -11,6 +11,10 @@ RUN npm install
 
 COPY . .
 
+# Create uploads directory and set permissions before build
+RUN mkdir -p /app/public/uploads && \
+    chmod -R 777 /app/public/uploads
+
 RUN npm run build
 
 EXPOSE 1337
