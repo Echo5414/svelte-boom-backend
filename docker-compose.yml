@@ -8,5 +8,8 @@ services:
       - "1337:1337"
     depends_on:
       - db
+    volumes:
+      - strapi-uploads:/app/public/uploads
 volumes:
   pgdata:
+  strapi-uploads:
