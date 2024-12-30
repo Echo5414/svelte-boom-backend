@@ -11,12 +11,12 @@ RUN npm install
 
 COPY . .
 
-# Create uploads directory and set permissions before build
-RUN mkdir -p /app/public/uploads && \
-    chmod -R 777 /app/public/uploads
+# Make start script executable
+COPY start.sh .
+RUN chmod +x start.sh
 
 RUN npm run build
 
 EXPOSE 1337
-CMD ["npm", "start"]
+CMD ["./start.sh"]
 
