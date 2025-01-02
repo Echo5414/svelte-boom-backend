@@ -7,4 +7,14 @@ export default ({ env }) => ({
   webhooks: {
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
   },
+  logger: {
+    level: 'debug',
+    exposeInContext: true,
+    requests: true,
+  },
+  settings: {
+    debug: {
+      upload: env.bool('DEBUG_UPLOAD', false),
+    },
+  },
 });
